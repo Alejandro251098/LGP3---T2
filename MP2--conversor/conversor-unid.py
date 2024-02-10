@@ -1,3 +1,5 @@
+# aqui esta todo el conversor como tal que importa las funciones y el diccionario de unidades
+ 
 from unidades import unidades
 from funciones import *
 

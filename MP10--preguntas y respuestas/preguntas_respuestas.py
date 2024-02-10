@@ -1,5 +1,7 @@
+# galeria random que se usara para randomizar las preguntas que estan ingresadas en lo siguiente diccionario
 import random
 
+# variable preguntas con el diccionarios que contienes las preguntas y respuestas 
 preguntas = {
     "Ciencia": [
         {"pregunta": "¿Cuál es la capital de colombia?", "respuesta": "bogota"},
@@ -17,7 +19,7 @@ preguntas = {
         {"pregunta": "¿cual es el lenguaje de programacion mas usado para crear aplicaciones y desarrollo web?", "respuesta": "python"}
     ]
 }
-
+funcion que permite seleccionar la categoria  de las pregruntas ingresando a las preguntas que estan en la variable preguntas
 def seleccionar_categoria():
     print("Selecciona una categoría:")
     for i, categoria in enumerate(preguntas.keys(), start=1):
@@ -29,7 +31,8 @@ def seleccionar_categoria():
     else:
         print("Categoría inválida.")
         return None
-
+# funcion para jugar  que segun la catoria selleciona una pregunta random  y nos pide ingrear la respuesta correcta
+# segun la respuesta ingresada nos devolvera una respuesa
 def jugar():
     categoria = seleccionar_categoria()
     if categoria:
@@ -41,6 +44,7 @@ def jugar():
         else:
             print(f"Respuesta incorrecta. La respuesta correcta es: {pregunta['respuesta']}")
 
+# funcion main que genera un menu para interactuar con el juego y las demas funciones , sellecionando la categoria y permitir jugar 
 def main():
     print("¡Bienvenido al juego de preguntas y respuestas!")
     while True:

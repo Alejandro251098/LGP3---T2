@@ -1,9 +1,12 @@
+# se crea la clase tareas para generar un blque de funciones 
 class tareas:
+
+    # funcion inico que declara como variables los parametros dados  para poder ser llamadas en las funciones
     def __init__(datos, descripcion, fecha_tarea, prioridad):
         datos.descripcion = descripcion
         datos.fecha_tarea = fecha_tarea
         datos.prioridad = prioridad
-
+# clase para generar un blque de funciones q se usaran para la confiduracion de la lista de tareas tareas
 class ConfigTareas:
     def __init__(datos):
         datos.tareas = []
@@ -25,6 +28,8 @@ class ConfigTareas:
         for i, tarea in enumerate(datos.tareas):
             print(f"{i+1}. Descripción: {tarea.descripcion}, Fecha de vencimiento: {tarea.fecha_tarea}, Prioridad: {tarea.prioridad}")
 
+# funcion main o principal , donde se llama la clase configtareas para poder usar las funciones en los siguoentes condicionales con 
+# las opciones de modificacion para la lista de tareas
 def main():
     manager = ConfigTareas()
 
